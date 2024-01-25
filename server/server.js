@@ -4,12 +4,14 @@ const { connectToDatabase, closeConnection } = require('./db/connection');
 
 // Import routes
 const moviesRoute = require('./routes/movies');
+const reviesRoute = require('./routes/reviews')
 
 // Middleware
 app.use(express.json());
 
 // Use routes
 app.use('/movies', moviesRoute);
+app.use('/reviews', reviesRoute)
 
 // Connect to MongoDB and start the server
 const startServer = async () => {
