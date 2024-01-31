@@ -1,0 +1,69 @@
+body{
+  background-color: rgb(32, 32, 32);
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #272626;
+  color: white;
+  padding: 10px;
+}
+
+.headerLogo,
+.headerMenu,
+.headerSearchBar,
+.headerWatchlist,
+.headerSignIn {
+  margin: 0 50px; /* Adjust the horizontal margin as needed */
+}
+
+/* Dropdown Menu Styles */
+.headerMenu {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #504c4c;
+  min-width: 130px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdownContent a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.headerMenu:hover .dropdownContent {
+  display: block;
+}
+
+/* Search Bar Styles */
+.headerSearchBar {
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  padding: 5px 30px 5px 5px; /* Adjust the padding as needed */
+  margin: 0;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg'); /* Adjust the URL accordingly */
+  background-repeat: no-repeat;
+  background-position: right center; /* Adjust the position as needed */
+  background-size: 20px 20px; /* Adjust the size as needed */
+}
+
+.searchIcon {
+  width: 20px; /* Adjust the width as needed */
+  height: 20px; /* Adjust the height as needed */
+  margin-left: 5px; /* Adjust the margin as needed */
+  cursor: pointer;
+  background-color: white;
+}
