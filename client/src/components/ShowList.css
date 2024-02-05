@@ -1,0 +1,61 @@
+.showListContainer {
+  text-align: center;
+}
+
+.popularShowHeader {
+  color: white;
+}
+
+.showPostersContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 300px;
+  overflow: hidden;
+}
+
+.popularShowPosters {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth transition for sliding effect */
+  }
+
+.popularShowPosterContainer {
+  margin-right: 10px;
+  transition: transform 0.5s ease; /* Smooth transition for sliding effect */
+}
+
+.popularShowPosters img {
+  width: 150px; /* Adjust the width based on your preference */
+  border: 3px solid transparent; /* Transparent border for hover effect */
+}
+
+.popularShowPosters img:hover {
+  border-color: green;
+}
+
+.scrollButton {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  outline: none;
+}
+
+.scrollButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.prevButton {
+  margin-right: auto; /* Push the button to the left */
+}
+
+.nextButton {
+  margin-left: auto; /* Push the button to the right */
+}

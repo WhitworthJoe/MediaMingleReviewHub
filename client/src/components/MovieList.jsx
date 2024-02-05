@@ -19,12 +19,22 @@ const MovieList = () => {
       };
 
       try {
-        const response = await fetch(
-          "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc",
-          options
-        );
-        const data = await response.json();
-        setMovies(data.results);
+        // Fetch movies from the first 3 pages
+        const pagesToFetch = [1, 2, 3];
+        const promises = pagesToFetch.map(async (page) => {
+          const response = await fetch(
+            `https://api.themoviedb.org/3/discover/movie?include_adult=true&include_video=false&language=en-US&page=${page}&sort_by=popularity.desc`,
+            options
+          );
+          const data = await response.json();
+          return data.results;
+        });
+
+        // Wait for all promises to resolve and concatenate the results
+        const results = await Promise.all(promises);
+        const concatenatedMovies = results.flat();
+
+        setMovies(concatenatedMovies);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -34,7 +44,9 @@ const MovieList = () => {
   }, []);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 6 < movies.length ? prevIndex + 6 : prevIndex));
+    setCurrentIndex((prevIndex) =>
+      prevIndex + 6 < movies.length ? prevIndex + 6 : prevIndex
+    );
   };
 
   const prevSlide = () => {
@@ -46,7 +58,11 @@ const MovieList = () => {
       <h2 className="popularMovieHeader">Popular Movies</h2>
 
       <div className="moviePostersContainer">
-        <button className="scrollButton prevButton" onClick={prevSlide} disabled={currentIndex === 0}>
+        <button
+          className="scrollButton prevButton"
+          onClick={prevSlide}
+          disabled={currentIndex === 0}
+        >
           &#9664; Prev
         </button>
 

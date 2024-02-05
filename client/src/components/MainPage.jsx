@@ -14,8 +14,7 @@ const MainPage = () => {
         <div className="headlineRegisterButtonContainer">
           <button className="headlineRegisterButton">GET STARTED - IT'S FREE!</button>
         </div>
-        <div className="underHeadline">A social media platform for film and TV lovers!
-            </div>
+        <div className="underHeadline">A social media platform for film and TV lovers!</div>
       </div>
     </div>
   );

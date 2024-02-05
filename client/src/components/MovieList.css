@@ -1,61 +1,64 @@
 /* MovieList.css */
 
 .movieListContainer {
-    text-align: center;
-  }
-  
-  .popularMovieHeader {
-    color: white;
-  }
-  
-  .moviePostersContainer {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  
-  .popularMoviePosters {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    overflow: hidden;
-  }
-  
-  .popularMoviePosterContainer {
-    margin-right: 10px;
-    transition: transform 0.5s ease; /* Smooth transition for sliding effect */
-  }
-  
-  .popularMoviePosters img {
-    width: 150px; /* Adjust the width based on your preference */
-    border: 2px solid transparent; /* Transparent border for hover effect */
-  }
-  
-  .popularMoviePosters img:hover {
-    border-color: green;
-  }
-  
-  .scrollButton {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 18px;
-    outline: none;
-  }
-  
-  .scrollButton:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-  
-  .prevButton {
-    margin-right: auto; /* Push the button to the left */
-  }
-  
-  .nextButton {
-    margin-left: auto; /* Push the button to the right */
-  }
-  
+  text-align: center;
+}
+
+.popularMovieHeader {
+  color: white;
+}
+
+.moviePostersContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the posters horizontally */
+  height: 300px;
+}
+
+.popularMoviePosters {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+
+.popularMoviePosterContainer {
+  margin-right: 10px;
+  transition: transform 0.5s ease;
+}
+
+.popularMoviePosters img {
+  width: 150px;
+  border: 3px solid transparent;
+}
+
+.popularMoviePosters img:hover {
+  border-color: green;
+}
+
+.scrollButton {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  outline: none;
+}
+
+.scrollButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.prevButton {
+  margin-left: 15%; /* Adjusted margin to control the position */
+}
+
+.nextButton {
+  margin-right: 15%; /* Adjusted margin to control the position */
+}

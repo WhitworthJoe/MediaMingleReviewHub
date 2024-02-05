@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "./components/Header.jsx";
 import MainPage from "./components/MainPage";
 import MovieList from "./components/MovieList";
+import ShowList from "./components/ShowList";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -37,6 +38,7 @@ function App() {
       <Header />
       <MainPage />
       <MovieList />
+      <ShowList />
     </div>
   );
 }
