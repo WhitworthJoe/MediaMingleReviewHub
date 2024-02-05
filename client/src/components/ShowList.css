@@ -10,7 +10,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  height: 300px;
+  height: 340px;
   overflow: hidden;
 }
 
@@ -35,6 +35,24 @@
 
 .popularShowPosters img:hover {
   border-color: green;
+}
+
+.showName{
+    color: white;
+    font-weight: bold;
+    flex-wrap: wrap;
+    width: 150px;
+    text-align: left;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.showAirDate{
+    color: white;
+    font-size: small;
+    text-align: left;
+    margin-left: 10%;
+    margin-top: 5%;
 }
 
 .scrollButton {

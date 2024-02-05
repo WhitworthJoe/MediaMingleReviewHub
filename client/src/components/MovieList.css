@@ -40,6 +40,24 @@
   border-color: green;
 }
 
+.movieTitle{
+  color: white;
+  font-weight: bold;
+  text-wrap: wrap;
+  width: 150px;
+  text-align: left;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.movieReleaseDate{
+  color: white;
+  text-align: left;
+  margin-left: 10%;
+  margin-top: 5%;
+  font-size: small;
+}
+
 .scrollButton {
   background-color: #333;
   color: white;

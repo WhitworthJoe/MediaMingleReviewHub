@@ -6,13 +6,21 @@ const ShowList = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(true);
 
+  const formatDate = (releaseDate) => {
+    const options = { day: 'numeric', month: 'short', year: 'numeric' };
+    const date = new Date(releaseDate);
+    return date.toLocaleDateString('en-UK', options);
+  };
+
   useEffect(() => {
     const fetchTVShows = async () => {
       const options = {
         method: "GET",
         headers: {
           accept: "application/json",
-          Authorization: "Bearer YOUR_API_KEY", // Replace with your actual API key
+          Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNDc4YjAxMDZkNjc5NjIwMWJjOTg0OGVkYjZiODBiYiIsInN1YiI6IjY1YmEzYjFhMzM0NGM2MDE4NTkzOTA2YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.IfBM0uQogckcOhWDo1-WT5JtOqrm-weD-RFqyVnzpDQ",
+          // Replace with your actual API key
         },
       };
 
@@ -22,7 +30,7 @@ const ShowList = () => {
 
         for (const page of pagesToFetch) {
           const response = await fetch(
-            `https://api.themoviedb.org/3/discover/tv?include_adult=false&include_null_first_air_dates=false&language=en-US&page=${page}&sort_by=popularity.desc`,
+            `https://api.themoviedb.org/3/discover/tv?include_adult=true&include_null_first_air_dates=false&language=en-US&page=${page}&sort_by=popularity.desc`,
             options
           );
           const data = await response.json();
@@ -79,6 +87,8 @@ const ShowList = () => {
                   src={`https://image.tmdb.org/t/p/w500${show.poster_path}`}
                   alt={`Poster for ${show.name}`}
                 />
+                <p className="showName">{show.name}</p>
+                <p className="showAirDate">{formatDate(show.first_air_date)}</p>
               </li>
             ))}
           </ul>

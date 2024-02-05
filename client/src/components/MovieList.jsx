@@ -7,6 +7,12 @@ const MovieList = () => {
   const [movies, setMovies] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const formatDate = (releaseDate) => {
+    const options = { day: 'numeric', month: 'short', year: 'numeric' };
+    const date = new Date(releaseDate);
+    return date.toLocaleDateString('en-UK', options);
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       const options = {
@@ -74,6 +80,8 @@ const MovieList = () => {
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                 alt={`Poster for ${movie.title}`}
               />
+              <p className="movieTitle">{movie.title}</p>
+              <p className="movieReleaseDate">{formatDate(movie.release_date)}</p>
             </li>
           ))}
         </ul>
