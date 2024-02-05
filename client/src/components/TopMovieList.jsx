@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./MovieList.css";
 
-const MovieList = () => {
+const TopMovieList = () => {
   const [movies, setMovies] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -27,7 +26,7 @@ const MovieList = () => {
 
         const promises = pagesToFetch.map(async (page) => {
           const response = await fetch(
-            `https://api.themoviedb.org/3/movie/popular?language=en-US&page=${page}`,
+            `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=${page}`,
             options
           );
           const data = await response.json();
@@ -62,7 +61,7 @@ const MovieList = () => {
 
   return (
     <div className="movieListContainer">
-      <h2 className="popularMovieHeader">Popular Movies</h2>
+      <h2 className="popularMovieHeader">Top Rated Movies</h2>
 
       <div className="moviePostersContainer">
         <button
@@ -99,4 +98,4 @@ const MovieList = () => {
   );
 };
 
-export default MovieList;
+export default TopMovieList;

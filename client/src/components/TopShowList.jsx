@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./ShowList.css";
 
-const ShowList = () => {
+const TopShowList = () => {
   const [shows, setShows] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -29,7 +28,7 @@ const ShowList = () => {
 
         for (const page of pagesToFetch) {
           const response = await fetch(
-            `https://api.themoviedb.org/3/tv/popular?language=en-US&page=${page}`,
+            `https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=${page}`,
             options
           );
           const data = await response.json();
@@ -66,7 +65,7 @@ const ShowList = () => {
 
   return (
     <div className="showListContainer">
-      <h2 className="popularShowHeader">Popular TV Shows</h2>
+      <h2 className="popularShowHeader">Top Rated TV Shows</h2>
 
       <div className="showPostersContainer">
         <button
@@ -105,4 +104,4 @@ const ShowList = () => {
   );
 };
 
-export default ShowList;
+export default TopShowList;

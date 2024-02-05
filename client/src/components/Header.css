@@ -16,10 +16,9 @@ body{
 .headerSearchBar,
 .headerWatchlist,
 .headerSignIn {
-  margin: 0 50px; /* Adjust the horizontal margin as needed */
+  margin: 0 50px;
 }
 
-/* Dropdown Menu Styles */
 .headerMenu {
   position: relative;
   cursor: pointer;
@@ -52,18 +51,18 @@ body{
 }
 
 .searchInput {
-  padding: 5px 30px 5px 5px; /* Adjust the padding as needed */
+  padding: 5px 30px 5px 5px;
   margin: 0;
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg'); /* Adjust the URL accordingly */
   background-repeat: no-repeat;
-  background-position: right center; /* Adjust the position as needed */
-  background-size: 20px 20px; /* Adjust the size as needed */
+  background-position: right center;
+  background-size: 20px 20px;
 }
 
 .searchIcon {
-  width: 20px; /* Adjust the width as needed */
-  height: 20px; /* Adjust the height as needed */
-  margin-left: 5px; /* Adjust the margin as needed */
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
   cursor: pointer;
   background-color: white;
 }

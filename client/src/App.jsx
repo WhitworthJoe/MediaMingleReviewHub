@@ -3,6 +3,9 @@ import Header from "./components/Header.jsx";
 import MainPage from "./components/MainPage";
 import MovieList from "./components/MovieList";
 import ShowList from "./components/ShowList";
+import TopMovieList from "./components/TopMovieList";
+import TopShowList from "./components/TopShowList";
+import Footer from "./components/Footer";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -39,6 +42,9 @@ function App() {
       <MainPage />
       <MovieList />
       <ShowList />
+      <TopMovieList />
+      <TopShowList />
+      <Footer />
     </div>
   );
 }
