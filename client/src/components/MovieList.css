@@ -36,6 +36,7 @@
 
 .popularMoviePosters img:hover {
   border-color: green;
+  cursor: pointer;
 }
 
 .movieTitle{

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header.jsx";
 import MainPage from "./components/MainPage";
 import MovieList from "./components/MovieList";
@@ -6,6 +7,7 @@ import ShowList from "./components/ShowList";
 import TopMovieList from "./components/TopMovieList";
 import TopShowList from "./components/TopShowList";
 import Footer from "./components/Footer";
+import AllMovies from "./components/AllMovies"
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -37,15 +39,34 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
-      <Header />
-      <MainPage />
-      <MovieList />
-      <ShowList />
-      <TopMovieList />
-      <TopShowList />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div className="app">
+              <Header />
+              <MainPage />
+              <MovieList />
+              <ShowList />
+              <TopMovieList />
+              <TopShowList />
+              <Footer />
+            </div>
+          }
+        ></Route>
+        <Route
+          path="/movies"
+          element={
+            <div>
+              <Header />
+              <AllMovies />
+              <Footer />
+            </div>
+          }
+        ></Route>
+      </Routes>
+    </Router>
   );
 }
 

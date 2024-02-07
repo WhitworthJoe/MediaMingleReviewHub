@@ -5,11 +5,11 @@ import searchIcon from "./assets/Magnifying_glass_icon.svg"
 const Header = () => {
   return (
     <header className="headerContainer">
-      <div className="headerLogo">LOGO</div>
+      <a className="headerLogo" href="/">LOGO</a>
       <div className="headerMenu">
         MENU
         <div className="dropdownContent">
-          <a href="#">Option 1</a>
+          <a href="/movies">Movies</a>
           <a href="#">Option 2</a>
           <a href="#">Option 3</a>
         </div>

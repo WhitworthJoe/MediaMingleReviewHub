@@ -1,0 +1,53 @@
+.filterComponent{
+    color: white;
+    padding: 5px;
+    margin: 20px;
+    background-color: rgb(1, 0, 63);
+}
+
+#StartDate,
+#EndDate,
+#Genre,
+#Sort{
+    margin: 10px;
+}
+
+.personSearchContainer {
+    position: relative;
+    margin-top: 10px;
+  }
+  
+  .personSearchContainer input[type="text"] {
+    width: 20%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: black;
+  }
+  
+  .peopleResults {
+    position: absolute;
+    z-index: 1;
+    top: 0%;
+    left: 0;
+    width: 20%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    color: black;
+  }
+  
+  .peopleResults li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .peopleResults li:hover,
+  .peopleResults li.selected {
+    background-color: #f0f0f0;
+  }

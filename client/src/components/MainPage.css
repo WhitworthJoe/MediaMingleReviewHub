@@ -5,7 +5,6 @@
     align-items: center;
     height: 90vh;
     overflow: hidden;
-    border: 2px solid red;
   }
   
   .backgroundContainer {
@@ -51,6 +50,7 @@
     cursor: pointer;
     border: none;
     font-size: large;
+    border-radius: 5px;
   }
 
   .underHeadline{

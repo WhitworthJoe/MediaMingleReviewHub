@@ -35,6 +35,7 @@
 
 .popularShowPosters img:hover {
   border-color: green;
+  cursor: pointer;
 }
 
 .showName{
